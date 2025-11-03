@@ -1,0 +1,81 @@
+body {
+  background-color: grey;
+  padding-top: 100px;
+}
+
+.zuckerberg {
+  background-color: #58aaff;
+}
+
+.logo {
+  width: 70px;
+}
+
+.navi a {
+  margin-left: 20px;
+  font-weight: bold;
+}
+.navbar {
+  list-style-type: none;
+  align-items: center;
+  background-color: #464545;
+  display: flex;
+
+  margin: 0;
+  padding: 0;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+}
+
+.navbar li a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: aliceblue;
+
+  padding: 14px 16px;
+}
+
+.navi {
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+  gap: 25px;
+}
+
+.navbar li:last-child {
+  margin-left: auto;
+}
+
+.navi a:hover {
+  color: #58aaff;
+}
+.LOGOside {
+  display: flex;
+  align-items: center;
+}
+
+.TITLE {
+  font-family: "Poppins";
+  font-size: 2rem;
+  color: aliceblue;
+}
+
+h1,
+h2 {
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.icon {
+  height: 1em;
+  width: 1em;
+  margin-right: 6px;
+  vertical-align: middle;
+}
