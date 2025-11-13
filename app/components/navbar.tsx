@@ -4,9 +4,10 @@ type NavbarProps = { children? : ReactNode}
 
 export default function Navbar({children} : NavbarProps) {
   return (
-    <nav className='dark:bg-slate-700 dark:text-slate-100 py-4 
-    fixed top-0 left-0 w-full bg-slate-300
-    text-slate-700 shadow-[0_5px_20px_rgba(0,0,0,0.25)]  '>
+    <nav 
+    className='dark:bg-slate-700 dark:text-slate-100 py-4 
+    fixed top-0 left-0 w-full  bg-linear-to-b from-slate-300 to-slate-100
+    text-slate-700 shadow-[0_5px_20px_rgba(0,0,0,0.25)] text-[clamp(1.2rem,4vw,2.5rem)] '>
         
         <ul className = "flex container gap-4 items-center ">
             <li className='flex  items-center'>
@@ -15,7 +16,7 @@ export default function Navbar({children} : NavbarProps) {
             />
             <Title>Tariq Kalai CV</Title>
             </li>
-            <li className ="ml-auto justify-between"> 
+            <li className ="ml-auto justify-between px-3"> 
                 <nav className ="flex gap-5 ">
                     <Link href="./About">About me</Link>
                     <Link href=".">Social medias</Link>
@@ -37,7 +38,7 @@ function Logo(props : LogoProps ){
 
     return(
         <a href=".">
-            <img src={props.src} className="w-[70px]"/>
+            <img src={props.src} className="w-15 md:w-24"/>
         </a>
     )
 }
@@ -45,9 +46,10 @@ function Logo(props : LogoProps ){
 type LinkProps = 
 {   children : ReactNode
     href : string       }
+
 function Link(props: LinkProps){
     return(
-        <a href={props.href}>
+        <a href={props.href} className ="text-[0.7rem] md:text-[1.5rem]">
             {props.children}
         </a>
     )
@@ -60,6 +62,6 @@ function Link(props: LinkProps){
 type TitleProps = { children : ReactNode}
 function Title( props : TitleProps){
     return( 
-        <span className='font-[Poppins] text-[2rem] ' > {props.children} </span>
+        <span className='font-[Poppins] text-[0.8rem] md:text-[2rem] ' > {props.children} </span>
     )
 }
