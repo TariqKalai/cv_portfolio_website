@@ -4,7 +4,7 @@ import { Children, type ReactNode } from 'react'
 
 export default function Footer(){
     return (
-    <footer className="max-w-5xl mx-auto py-16 px-6 grid grid-cols-1 md:grid-cols-2 gap-12 text-xl text-white">
+    <footer className="w-full mx-auto py-10 px-6 grid grid-cols-1 md:grid-cols-2 gap-8 text-xl text-white">
     
 
 

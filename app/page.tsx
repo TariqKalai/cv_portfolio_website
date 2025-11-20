@@ -1,5 +1,5 @@
-import Cleanbar from "./components/Cleanbar"
-import Navbar from "./components/navbar"
+import Cleanbar from "../components/Cleanbar"
+import Navbar from "../components/navbar"
 
 
 

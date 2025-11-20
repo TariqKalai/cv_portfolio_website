@@ -6,7 +6,7 @@ export default function Navbar({children} : NavbarProps) {
   return (
     <nav 
     className='dark:bg-slate-700 dark:text-slate-100 py-4 
-    fixed top-0 left-0 w-full  bg-linear-to-b from-slate-300 to-slate-100
+    top-0 left-0 w-full  bg-linear-to-b from-slate-300 to-slate-100
     text-slate-700 shadow-[0_5px_20px_rgba(0,0,0,0.25)] text-[clamp(1.2rem,4vw,2.5rem)] '>
         
         <ul className = "flex container gap-4 items-center ">
