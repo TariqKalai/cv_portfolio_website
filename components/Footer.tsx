@@ -4,11 +4,11 @@ import { Children, type ReactNode } from 'react'
 
 export default function Footer(){
     return (
-    <footer className="w-full mx-auto py-10 px-6 grid grid-cols-1 md:grid-cols-2 gap-8 text-xl text-white">
+    <footer className="w-full mx-auto py-10 px-6 grid grid-cols-1 md:grid-cols-2 gap-8 text-xl text-[#3D3D3D]">
     
 
 
-          <div className="flex items-center gap-2  font-medium">
+          <div className="flex justify-self-center gap-2  font-medium">
             <span>© 2025 Kalaï Tariq</span>
           </div>
 

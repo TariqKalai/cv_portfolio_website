@@ -8,19 +8,19 @@ export default function Page() {
     <>
     <div>
         <h1 className={`text-3xl sm:text-6xl text-center
-                      font-bold ${color} mb-8 
+                      font-bold  mb-8 
                       leading-tight `}>
         Hello!
         </h1>
 
       <div className=" pt-19 grid grid-cols-1 md:grid-cols-2  ">
-        <div className="justify-self-center "><img src={"logo.svg"} alt="LOGO"/></div>
+        <div className="justify-self-center color "><img src={"logo.svg"} alt="LOGO"/></div>
         <div>
                         
-                        <h2 className="{`text-2xl sm:text-4xl 
+                        <h2 className={`text-2xl sm:text-4xl 
                                       text-center
-                                      font-bold ${color} mb-8 
-                                      leading-tight `}">
+                                      font-bold  mb-8 
+                                      leading-tight `}>
                           Hello my name in japan
                         </h2>
                         <div>
