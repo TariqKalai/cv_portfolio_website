@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="100mm"
+   height="100mm"
+   viewBox="0 0 100 100"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   sodipodi:docname="drawing-2.svg"
+   inkscape:export-filename="drawing-2.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.70710678"
+     inkscape:cx="-95.459415"
+     inkscape:cy="50.204581"
+     inkscape:window-width="1920"
+     inkscape:window-height="982"
+     inkscape:window-x="-10"
+     inkscape:window-y="-10"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g4"
+       transform="matrix(2.0509275,0,0,2.0509275,-48.088533,-17.81036)">
+      <path
+         d="m 50.625308,23.61268 -0.868164,2.207617 h -0.173633 q 0.04961,-0.198438 0.04961,-0.533301 0,-0.285254 -0.21084,-0.359668 -0.198438,-0.08682 -0.644922,-0.08682 h -4.774902 v 15.639355 q 0,0.967383 0.148828,1.327051 0.16123,0.347265 0.421679,0.446484 0.272852,0.08682 0.868164,0.08682 v 0.173633 h -4.948535 v -0.173633 q 0.930176,-0.06201 1.165821,-0.359668 0.235644,-0.297656 0.235644,-1.240234 V 24.840512 h -4.576465 q -0.694531,0 -0.905371,0.08682 -0.21084,0.07441 -0.21084,0.396875 0,0.16123 0.09922,0.496094 H 36.126968 L 35.258804,23.61268 h 0.173633 q 0.223242,0.446484 0.434082,0.545703 0.223242,0.08682 0.942578,0.08682 h 12.141895 q 0.719336,0 1.029394,-0.08682 0.322461,-0.09922 0.471289,-0.545703 z"
+         id="text1"
+         style="font-size:25.4px;font-family:'Felix Titling';-inkscape-font-specification:'Felix Titling';stroke-width:2.5;stroke-linejoin:round;paint-order:stroke fill markers"
+         aria-label="T&#10;" />
+      <path
+         d="m 40.327056,24.245199 h 5.233789 v 0.186035 q -0.855762,-0.03721 -1.203027,0.260449 -0.347266,0.285254 -0.347266,1.513086 v 7.007324 l 10.852051,-8.148339 q 0.322461,-0.223242 0.322461,-0.409278 0,-0.223242 -0.731739,-0.223242 v -0.186035 h 3.943946 v 0.186035 q -1.488282,0.03721 -2.902149,1.091406 l -9.450586,7.056934 9.425782,7.168555 q 0.0124,0.0124 0.03721,0.0248 0.0248,0.0124 0.03721,0.03721 0.0248,0.0124 0.04961,0.0124 1.860352,1.389062 2.877344,1.95957 1.029394,0.558105 1.922363,0.558105 v 0.173633 h -6.213574 v -0.173633 q 0.830957,0 0.830957,-0.186035 0,-0.16123 -0.682129,-0.682129 l -10.31875,-7.850683 v 6.784082 q 0,1.190625 0.161231,1.463476 0.173632,0.272852 0.446484,0.396875 0.285254,0.111621 0.917773,0.07441 v 0.173633 h -5.208984 v -0.173633 q 1.041797,0.04961 1.302246,-0.310058 0.272852,-0.372071 0.272852,-1.550293 V 26.303988 q 0,-1.21543 -0.272852,-1.575098 -0.260449,-0.359667 -1.302246,-0.297656 z"
+         id="text3"
+         style="font-size:25.4px;font-family:'Felix Titling';-inkscape-font-specification:'Felix Titling';stroke-width:2.5;stroke-linejoin:round;paint-order:stroke fill markers"
+         aria-label="k&#10;" />
+    </g>
+    <rect
+       style="opacity:1;fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:2.07838;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="rect4"
+       width="65.924088"
+       height="65.924088"
+       x="17.823256"
+       y="17.037956" />
+  </g>
+</svg>

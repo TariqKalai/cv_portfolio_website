@@ -27,11 +27,12 @@ export default function RootLayout({
 }>) {
   return (
     <html>
+      
 
       
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased pt-26 md:pt-35`}>
 
-       <Navbar /> 
+      {/* <Navbar />  */}
         
         
       <Cleanbar/>
