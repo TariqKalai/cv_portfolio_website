@@ -6,7 +6,7 @@ export default async function CV_Entry() {
   return (
     <>
       {/* CREATE NEW ENTRY */}
-      <form action={createEntry}>
+      <form action={createEntry} className='flex flex-col'>
         <h2>Create Entry</h2>
 
         <label>
@@ -27,43 +27,18 @@ export default async function CV_Entry() {
         <button type="submit">Create</button>
       </form>
 
-      <hr />
-
-      {/* UPDATE EXISTING ENTRIES */}
-      {entries.map((entry) => (
-        <form action={createEntry} key={entry.id} style={{ marginBottom: "1rem" }}>
-          <h3>Edit Entry</h3>
-
-          {/* hidden ID to link with server action */}
-          <input type="hidden" name="id" value={entry.id} />
-
-          <label>
-            Title:
-            <input name="title" value={entry.title} />
-          </label>
-
-          <label>
-            Date:
-            <input name="date" value={entry.date} />
-          </label>
-
-          <label>
-            Content:
-            <textarea name="entry" value={entry.entry}></textarea>
-          </label>
-
-          <button type="submit">Save</button>
-        </form>
-      ))}
-
-      <hr />
+      
 
       {/* SIMPLE LIST */}
-      <ul>
         {entries.map((entry) => (
-          <li key={entry.id}>{entry.title}</li>
-        ))}
+          
+       <ul className='flex gap-3' key={entry.id} >
+          <li>{entry.title}</li>
+          <li>{entry.date}</li>
+          <li>{entry.entry}</li>
+        
       </ul>
+        ))}
     </>
   )
 }

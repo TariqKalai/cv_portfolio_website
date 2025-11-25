@@ -8,6 +8,7 @@ import LoginPopup from "./LoginPopup";
 
 export default function Cleanbar(){
     const [open, setOpen] = useState(false);
+    
     return (
         <>
         <nav className="fixed top-6 
@@ -15,7 +16,7 @@ export default function Cleanbar(){
                         w-[95%] sm:w-[75%] max-w-120
                         rounded-3xl shadow-2lg
                         bg-white/20  backdrop-blur-sm border border-white/40
-                        text-white 
+                        text-[#3D3D3D] dark:text-slate-300
                         transiton-all duration-500
                          ">
 
@@ -30,7 +31,7 @@ export default function Cleanbar(){
                     px-1 py-1 sm:px-2 sm:py-2 md:px-3 md:py-3                       /* padding confortable */
                     rounded-3xl                      /* arrondi visible */
                     text-[12px]  min-[400px]:text-[16px]
-                    hover:bg-white/5 hover:text-[18px] hover:[&>img]:h-7     /* hover propre */
+                    hover:bg-slate-700 hover:text-[18px] hover:[&>img]:h-7     /* hover propre */
                     transition-all duration-200     /* smooth */"
                     onClick={() => setOpen(true)}>
                     <img src="/login.svg" alt="login" className='h-6'/>
