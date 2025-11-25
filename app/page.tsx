@@ -1,3 +1,4 @@
+import CV_Entry from "@/components/Entry"
 import Cleanbar from "../components/Cleanbar"
 import Navbar from "../components/navbar"
 
@@ -30,6 +31,8 @@ export default function Page() {
                           réaliser un projet concret. 
                            Industriel, spécialité Génie Électrique, à l’ECAM Bruxelles. Je suis actuellement à la recherche d’un stage pour ma 3ᵉ année de bachelier, qui doit se dérouler entre le 7 avril 2026 et le 22 mai 2026, 
                         </div>
+
+          <CV_Entry/>
                       
         </div>
       </div>
