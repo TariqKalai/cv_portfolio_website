@@ -1,25 +1,67 @@
-import { getEntries, createEntry, deleteEntry } from '@/lib/CV_entry'
+import { getEntries, createEntry } from '@/lib/CV_entry'
 
 export default async function CV_Entry() {
-  const Entry = await getEntries()
+  const entries = await getEntries()
 
   return (
     <>
+      {/* CREATE NEW ENTRY */}
       <form action={createEntry}>
+        <h2>Create Entry</h2>
+
         <label>
-          New Entry: <input name="title" />
+          Title:
+          <input name="title" />
         </label>
-        <button>Submit</button>
+
+        <label>
+          Date:
+          <input name="date"  />
+        </label>
+
+        <label>
+          Content:
+          <textarea name="entry"></textarea>
+        </label>
+
+        <button type="submit">Create</button>
       </form>
 
+      <hr />
+
+      {/* UPDATE EXISTING ENTRIES */}
+      {entries.map((entry) => (
+        <form action={createEntry} key={entry.id} style={{ marginBottom: "1rem" }}>
+          <h3>Edit Entry</h3>
+
+          {/* hidden ID to link with server action */}
+          <input type="hidden" name="id" value={entry.id} />
+
+          <label>
+            Title:
+            <input name="title" value={entry.title} />
+          </label>
+
+          <label>
+            Date:
+            <input name="date" value={entry.date} />
+          </label>
+
+          <label>
+            Content:
+            <textarea name="entry" value={entry.entry}></textarea>
+          </label>
+
+          <button type="submit">Save</button>
+        </form>
+      ))}
+
+      <hr />
+
+      {/* SIMPLE LIST */}
       <ul>
-        {Entry.map((Entry, id) => (
-          <form action={deleteEntry.bind(null, id)} key={id}>
-            <li>{Entry.title}</li>
-            <button>
-              Delete Entry
-            </button>
-          </form>
+        {entries.map((entry) => (
+          <li key={entry.id}>{entry.title}</li>
         ))}
       </ul>
     </>
