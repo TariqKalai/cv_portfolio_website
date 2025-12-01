@@ -43,7 +43,7 @@ export default function Cleanbar() {
                     px-1 py-1 sm:px-2 sm:py-2 md:px-3 md:py-3                       /* padding confortable */
                     rounded-3xl                      /* arrondi visible */
                     text-[12px]  min-[400px]:text-[16px]
-                    hover:bg-slate-700 hover:text-[18px] hover:[&>img]:h-7     /* hover propre */
+                    hover:bg-white/10 hover:text-[18px] hover:[&>img]:h-7     /* hover propre */
                     transition-all duration-200     /* smooth */"
               onClick={() => setOpen(true)}
             >

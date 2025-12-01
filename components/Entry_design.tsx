@@ -24,16 +24,16 @@ export async function Entry_design({ canEdit = false }: DesignProps) {
             {/* Header: Company/School & Dates (High contrast, bold hierarchy) */}
             <div className="flex justify-between items-start mb-4">
               <h3 className="text-2xl font-bold text-gray-900">
-                [Entry Title: {entry.title}]
+                {entry.title}
               </h3>
               <span className="text-base text-gray-700 font-medium">
-                [Date Range: {entry.date}]
+                {entry.startDate} - {entry.endDate}
               </span>
             </div>
 
             {/* Subheader: Location/Details (Subtle text) */}
             <p className="text-lg text-gray-800 italic mb-4">
-              [Organization: ECAM Bruxelles] | [Role/Degree: Bachelier 3e année]
+              Organization:{entry.organisation} | Role: {entry.role}
             </p>
 
             <hr className="my-4 border-white/50" />
@@ -43,11 +43,7 @@ export async function Entry_design({ canEdit = false }: DesignProps) {
               <p className="mb-4">{entry.entry}</p>
               <ul className="list-disc list-inside space-y-2 ml-4">
                 <li>
-                  **Project:** [Brief description of the main project/task.]
-                </li>
-                <li>
-                  **Skills Used:** [List of technologies or soft skills used,
-                  e.g., AutoCAD, MATLAB, Gestion de projet.]
+                  <b>Skills Used:</b> [{entry.skills}]
                 </li>
               </ul>
             </div>

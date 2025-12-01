@@ -27,13 +27,32 @@ export default async function CV_Entry() {
         </label>
 
         <label>
-          Date:
-          <input name="date" className="bg-white" />
+          StartDate:
+          <input type="date" name="start" className="bg-white" />
+        </label>
+        <label>
+          EndDate:
+          <input type="date" name="end" className="bg-white" />
+        </label>
+
+        <label>
+          Organisation:
+          <input name="organisation" className="bg-white" />
+        </label>
+
+        <label>
+          Role:
+          <input name="role" className="bg-white" />
         </label>
 
         <label>
           Content:
           <textarea name="entry" className="bg-white"></textarea>
+        </label>
+
+        <label>
+          skills:
+          <input name="skills" className="bg-white" />
         </label>
 
         <button type="submit" className={buttoncolor}>
