@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Navbar from "../components/navbar";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Cleanbar from "../components/Cleanbar";
@@ -27,20 +26,13 @@ export default function RootLayout({
 }>) {
   return (
     <html>
-      
-
-      
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased pt-26 md:pt-35 min-h-screen`}>
-
-      {/* <Navbar />  */}
-        
-        
-      <Cleanbar/>
-      {children} 
-      <Footer/>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased pt-26 md:pt-35 min-h-screen`}
+      >
+        <Cleanbar />
+        {children}
+        <Footer />
       </body>
-
-
     </html>
   );
 }

@@ -1,11 +1,13 @@
-import CV_Entry from "@/components/Entry";
-import Cleanbar from "../components/Cleanbar";
-import Navbar from "../components/navbar";
+export const dynamic = "force-dynamic";
+// force dynamic makes it so i don t build database when prod until it runs
+
 import { Entry_design } from "@/components/Entry_design";
+import { getEntries } from "@/lib/CV_entry";
 
 let color = "text-emerald-200";
 
-export default function Page() {
+export default async function Page() {
+  const entries = await getEntries();
   return (
     <>
       <div>
@@ -41,7 +43,7 @@ export default function Page() {
           </div>
         </div>
 
-        <Entry_design />
+        <Entry_design entries={entries} />
       </div>
     </>
   );

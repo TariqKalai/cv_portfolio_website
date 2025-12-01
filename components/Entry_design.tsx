@@ -1,12 +1,31 @@
-import { getEntries, createEntry, deleteEntry } from "@/lib/CV_entry";
-import { ReactNode } from "react";
+"use client";
 
+import {
+  getEntries,
+  createEntry,
+  deleteEntry,
+  editEntry,
+} from "@/lib/CV_entry";
+import { ReactNode, useState } from "react";
+// Define the shape of a single Entry object
+type Entry = {
+  // Matches Drizzle uuid().defaultRandom().primaryKey()
+  id: string;
+  title: string;
+  startDate: string;
+  endDate: string | null;
+  entry: string;
+  organisation: string;
+  role: string;
+  skills: string;
+};
 type DesignProps = {
   canEdit?: boolean;
+  entries: Entry[];
 };
 
-export async function Entry_design({ canEdit = false }: DesignProps) {
-  const entries = await getEntries();
+export function Entry_design({ canEdit = false, entries }: DesignProps) {
+  const [openEditMenu, setOpenEditMenu] = useState(false);
 
   let buttoncolor =
     "p-1 rounded-xl border border-white bg-white/40 backdrop-blur text-center hover:bg-white/5 transition";
@@ -57,10 +76,112 @@ export async function Entry_design({ canEdit = false }: DesignProps) {
                   Delete
                 </button>
               </form>
-              <button className={buttoncolor}>Modify</button>
+              <button
+                onClick={() => setOpenEditMenu(true)}
+                className={buttoncolor}
+              >
+                Modify
+              </button>
+              {openEditMenu && <Formulary entres={entries} />}
             </div>
           )}
         </div>
+      ))}
+    </>
+  );
+}
+
+type FormularyProps = {
+  entres: Entry[];
+};
+function Formulary({ entres }: FormularyProps) {
+  const inputClasses = "bg-white p-2 rounded border border-gray-300 w-full";
+  const labelClasses = "flex flex-col text-sm font-medium w-full max-w-sm";
+  const buttonClass =
+    "p-2 rounded-xl border border-blue-500 bg-blue-500/80 text-white hover:bg-blue-600 transition";
+
+  return (
+    <>
+      {entres.map((entry) => (
+        <form
+          action={editEntry}
+          className="flex flex-col items-center gap-4 p-4 bg-white/20 rounded-lg"
+          key={entry.id}
+        >
+          <input type="hidden" name="id" value={entry.id} />
+          <h2 className="text-2xl font-bold">Create New Entry</h2>
+
+          <label className={labelClasses}>
+            Title:
+            <input
+              name="title"
+              defaultValue={entry.title}
+              className={inputClasses}
+              required
+            />
+          </label>
+
+          <div className="flex gap-4 w-full max-w-sm">
+            <label className={labelClasses}>
+              Start Date:
+              <input
+                type="date"
+                name="start"
+                defaultValue={entry.startDate}
+                className={inputClasses}
+                required
+              />
+            </label>
+            <label className={labelClasses}>
+              End Date:
+              <input type="date" name="end" className={inputClasses} />
+            </label>
+          </div>
+
+          <label className={labelClasses}>
+            Organisation:
+            <input
+              name="organisation"
+              defaultValue={entry.organisation}
+              className={inputClasses}
+              required
+            />
+          </label>
+
+          <label className={labelClasses}>
+            Role:
+            <input
+              name="role"
+              defaultValue={entry.role}
+              className={inputClasses}
+              required
+            />
+          </label>
+
+          <label className={labelClasses}>
+            Content:
+            <textarea
+              name="entry"
+              defaultValue={entry.entry}
+              className={inputClasses}
+              required
+            ></textarea>
+          </label>
+
+          <label className={labelClasses}>
+            Skills:
+            <input
+              name="skills"
+              defaultValue={entry.skills}
+              className={inputClasses}
+              required
+            />
+          </label>
+
+          <button type="submit" className={buttonClass}>
+            Modify Entry
+          </button>
+        </form>
       ))}
     </>
   );

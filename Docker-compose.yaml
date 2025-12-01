@@ -8,6 +8,13 @@ services:
       POSTGRES_DB: mydb
     volumes:
       - /var/lib/postgresql/data
+  adminer:
+    image: adminer
+    restart: unless-stopped
+    environment:
+      ADMINER_DEFAULT_SERVER: db
+    ports:
+      - "8080:8080"
   app:
     depends_on:
       - db

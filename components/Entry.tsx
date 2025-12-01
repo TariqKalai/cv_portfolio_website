@@ -60,7 +60,7 @@ export default async function CV_Entry() {
         </button>
       </form>
 
-      <Entry_design canEdit={true} />
+      <Entry_design canEdit={true} entries={entries} />
     </>
   );
 }

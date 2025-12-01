@@ -23,6 +23,8 @@ export async function createEntry(form: FormData) {
 }
 
 export async function editEntry(form: FormData) {
+  const id = String(form.get("id"));
+
   await db
     .update(entryTable)
     .set({
@@ -34,7 +36,7 @@ export async function editEntry(form: FormData) {
       skills: String(form.get("skills")),
       organisation: String(form.get("organisation")),
     })
-    .where(eq(entryTable.id, String(form.get("id"))));
+    .where(eq(entryTable.id, id));
   redirect((await headers()).get("referer") ?? "/");
 }
 
