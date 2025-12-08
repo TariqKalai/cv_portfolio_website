@@ -12,3 +12,9 @@ export const entryTable = pgTable("entry", {
 });
 
 export const portfolioTable = pgTable("portfolio", {});
+
+export const usersTable = pgTable("users", {
+  id: uuid().defaultRandom().primaryKey(),
+  username: text().notNull().unique(),
+  password: text().notNull(),
+});
