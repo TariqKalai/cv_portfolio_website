@@ -13,7 +13,7 @@ type Entry = {
   id: string;
   title: string;
   startDate: string;
-  endDate: string;
+  endDate: string | null;
   entry: string;
   organisation: string;
   role: string;
@@ -134,12 +134,7 @@ function Formulary({ entres }: FormularyProps) {
             </label>
             <label className={labelClasses}>
               End Date:
-              <input
-                type="date"
-                name="end"
-                defaultValue={entry.endDate}
-                className={inputClasses}
-              />
+              <input type="date" name="end" className={inputClasses} />
             </label>
           </div>
 
