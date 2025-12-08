@@ -2,9 +2,11 @@
 
 import { useState, type ReactNode } from "react";
 import LoginPopup from "./LoginPopup";
+import { getSession } from "@/lib/session";
 
-export default function Cleanbar() {
+export default async function Cleanbar() {
   const [open, setOpen] = useState(false);
+  const { isLoggedIn } = await getSession();
 
   return (
     <>
@@ -35,21 +37,23 @@ export default function Cleanbar() {
             {" "}
             <Link href="..">Contact</Link>{" "}
           </li>
-          <li>
-            {" "}
-            <button
-              className="
+          {!isLoggedIn && (
+            <li>
+              {" "}
+              <button
+                className="
                     block                           /* augmente la hitbox */
                     px-1 py-1 sm:px-2 sm:py-2 md:px-3 md:py-3                       /* padding confortable */
                     rounded-3xl                      /* arrondi visible */
                     text-[12px]  min-[400px]:text-[16px]
                     hover:bg-white/10 hover:text-[18px] hover:[&>img]:h-7     /* hover propre */
                     transition-all duration-200     /* smooth */"
-              onClick={() => setOpen(true)}
-            >
-              <img src="/login.svg" alt="login" className="h-6" />
-            </button>
-          </li>
+                onClick={() => setOpen(true)}
+              >
+                <img src="/login.svg" alt="login" className="h-6" />
+              </button>
+            </li>
+          )}
         </ul>
       </nav>
 
